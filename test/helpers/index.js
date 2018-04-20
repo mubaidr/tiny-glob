@@ -1,8 +1,8 @@
 const isWin = process.platform === 'win32';
 
 // unixify path for cross-platform testing
-function unixify(arr) {
-  return isWin ? arr.map(str => str.replace(/\\/g, '/')) : arr;
+function unixify(str) {
+  return isWin ? str.replace(/\\/g, '/') : str;
 }
 
 function toIgnore(str) {
